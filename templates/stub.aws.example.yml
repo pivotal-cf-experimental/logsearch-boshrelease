@@ -28,7 +28,7 @@ jobs:
   persistent_disk_pool: elasticsearch_data
 
 - name: ingestor
-  instances: 1
+  instances: 0
   networks:
   - name: default
     static_ips: (( static_ips(1) ))
@@ -38,7 +38,7 @@ jobs:
   resource_pool: ingestor
 
 - name: queue
-  instances: 1
+  instances: 0
   networks:
   - name: default
     static_ips: (( static_ips(3) ))
@@ -46,21 +46,21 @@ jobs:
   persistent_disk_pool: queue
 
 - name: parser
-  instances: 1
+  instances: 0
   networks:
   - name: default
     static_ips: (( static_ips(4) ))
   resource_pool: parser
 
 - name: kibana
-  instances: 1
+  instances: 0
   networks:
   - name: default
     static_ips: (( static_ips(8) ))
   resource_pool: kibana
 
 - name: maintenance
-  instances: 1
+  instances: 0
   networks:
   - name: default
   resource_pool: maintenance
