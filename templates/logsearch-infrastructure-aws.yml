@@ -1,22 +1,22 @@
 compilation:
   cloud_properties:
-    instance_type: c4.large
+    instance_type: t2.micro
 
 resource_pools:
 - name: elasticsearch_master
   cloud_properties:
-    availability_zone: eu-west-1a
+    availability_zone: us-east-1
     instance_type: t2.micro
 
 - name: elasticsearch_data
   cloud_properties:
-    availability_zone: eu-west-1a
+    availability_zone: us-east-1
     instance_type: t2.micro
 
 - name: queue
   cloud_properties:
     availability_zone: eu-west-1a
-    instance_type: t2.small
+    instance_type: t2.micro
 
 - name: ingestor
   cloud_properties:
@@ -41,7 +41,7 @@ resource_pools:
 - name: cluster_monitor
   cloud_properties:
     availability_zone: eu-west-1a
-    instance_type: m4.large
+    instance_type: t2.micro
 
 - name: haproxy
   cloud_properties:
